@@ -84,35 +84,11 @@ namespace Suggrafeas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Biografiko.IsSelected)
-            {
-                Button1.Visibility = Visibility.Collapsed;
-                MyFrame.Navigate(typeof(Biografiko)); TextBlock.Text = "Βιογραφικό";
-
-            }
-
-            if (Sungramata.IsSelected)
-            {
-                Button1.Visibility = Visibility.Visible;
-                MyFrame.Navigate(typeof(Biografiko)); TextBlock.Text = "Συγγράμματα";
-                Biografiko.IsSelected = true;
-
-            }
-
-            if (EkdotikosOikos.IsSelected)
-            {
-                Button1.Visibility = Visibility.Visible;
-                MyFrame.Navigate(typeof(Biblia)); TextBlock.Text = "Εκδοτικός";
-                Sungramata.IsSelected = true;
-            }
-
-            if (Fwtografies.IsSelected)
-            {
-                Button1.Visibility = Visibility.Visible;
-                MyFrame.Navigate(typeof(Anima)); TextBlock.Text = "Φωτογραφίες";
-                EkdotikosOikos.IsSelected = true;
-            }
             
+            if (MyFrame.CanGoBack)
+            {
+            MyFrame.GoBack();
+            }
         }
     }
 }
