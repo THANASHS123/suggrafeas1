@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Suggrafeas.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Suggrafeas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    
+        
+        <ScrollViewer  x:Name="MainScrollViewer"  VerticalScrollMode="Auto">
+        <StackPanel ScrollViewer.HorizontalScrollMode="Auto" Background="White">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"  x:Name="text1"  TextWrapping="Wrap">
+    					<Run Text="Φωτογραφίες απο τις παρουσιάσεις των βιβλίων στον Δομοκό με την χορήγηση του εκδοτικού οίκου Anima."/>
+                    </TextBlock>
+                    <Image Grid.Row="2" Width="300" x:Name="picture1" Source="photos/1.jpg"/>
+                </Grid>
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap">
+    					<Run Text="Πριν την παρουσίαση."/>
+                    </TextBlock>
+                    <Image Grid.Row="2" Width="300" Source="photos/2.jpg"/>
+                </Grid>
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap">
+    					<Run Text="Υπογράφοντας τα βιβλία στους παρόντες η Κωσταντίνα Καντζίου."/>
+                    </TextBlock>
+                    <Image Grid.Row="2" Width="300" Source="photos/3.jpg"/>
+                </Grid>
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" TextWrapping="Wrap">
+    					<Run Text="Τα βιβλία."/>
+                    </TextBlock>
+                    <Image Grid.Row="2" Width="300" Source="photos/4.jpg"/>
+                </Grid>
+                <ScrollViewer Height="100" Width="100"/>
+            </StackPanel>
+
+        </ScrollViewer>
+        
+
+
+   
+</Page>

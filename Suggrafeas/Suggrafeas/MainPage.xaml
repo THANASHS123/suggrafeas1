@@ -1,0 +1,101 @@
+﻿<Page
+    x:Class="Suggrafeas.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Suggrafeas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>           
+        </Grid.RowDefinitions>
+
+        <RelativePanel>
+            <Button FontSize="36"
+                FontFamily="Segoe MDL2 Assets"
+                Name="HamburgerButton"
+                    Click="HamburgerButton_Click"
+                    Content="&#xE700;"
+                    RelativePanel.AlignLeftWithPanel="True"></Button>
+            
+            <Button FontSize="36"
+                    Name="Button1"
+                    FontFamily="Segoe MDL2 Assets"
+                    Click="Button_Click"
+                    Content="&#xE0C4;"
+                    RelativePanel.RightOf="HamburgerButton"
+                    ></Button>
+
+
+
+            <TextBlock Margin="3,0,0,0" Name="TextBlock" FontSize="22"
+                RelativePanel.RightOf="Button1"                
+                       Text="Κωσταντίνα Καντζίου"
+                       />    
+            
+            
+        </RelativePanel>
+
+        <SplitView Grid.Row="1"
+                   Name="MySplitView"
+                   DisplayMode="CompactOverlay"
+                   OpenPaneLength="233"
+                   CompactPaneLength="56"
+                   >
+            
+            
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="Biografiko">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  FontFamily="Segoe MDl2 Assets" FontSize="36" Text="&#xE77B;"/>
+                            <TextBlock Margin="20,0,0,0" Text="Βιογραφικό" FontSize="24"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Sungramata">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDl2 Assets" FontSize="36" Text="&#xE8A1;"/>
+                            <TextBlock Margin="20,0,0,0" Text="Βιβλία" FontSize="24"/>
+                        </StackPanel>
+                    </ListBoxItem>
+
+
+                    <ListBoxItem Name="EkdotikosOikos">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Height="35" Source="Assets\anima.jpg"/>
+                            <TextBlock Margin="20,0,0,0" TextWrapping="Wrap" Text="Εκδόσεις" FontSize="24"/>
+                        </StackPanel>
+                    </ListBoxItem>
+
+
+                    <ListBoxItem Name="Fwtografies">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDl2 Assets" FontSize="36" Text="&#xE722;"/>
+                            <TextBlock Margin="20,0,0,0" TextWrapping="Wrap" Text="Φωτογραφίες" FontSize="24"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    
+                </ListBox>
+
+
+
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <Frame Name="MyFrame"></Frame>
+            </SplitView.Content>
+
+
+
+
+        </SplitView>
+        
+        
+        
+        
+    </Grid>
+</Page>
